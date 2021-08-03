@@ -1,8 +1,7 @@
 .disco {
     height: 70px;
-    border: solid 1px rgb(255, 255, 255);
+    border: solid 1px rgb(240, 227, 46);
     margin: 0 auto;
     border-radius: 10px;
     filter: drop-shadow(2px 4px 6px black);
-
 }
