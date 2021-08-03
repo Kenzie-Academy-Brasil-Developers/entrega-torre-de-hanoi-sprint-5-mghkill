@@ -4,15 +4,16 @@ let towerThree = document.getElementById('tower-three')
 
 const box = document.querySelectorAll(".container")
 
+//class transformar
 
-const createDiv = (value) =>{
-    for(let i = 0; i < value; i++){
-        let newDiv = document.createElement('div')
-        newDiv.classList.add('disco')
-        towerOne.appendChild(newDiv)
+for(let i = 1; i <= 4; i++){
+    let newDiv = document.createElement('div')
+    newDiv.classList.add('disco')
+    newDiv.id = 'd' + i
+    towerOne.appendChild(newDiv)
 
-    }
 }
+
 
 let firstClick = ""
 let secondClick = ""
