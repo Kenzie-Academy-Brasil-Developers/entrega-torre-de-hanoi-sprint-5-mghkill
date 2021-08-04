@@ -2,14 +2,14 @@ const towerHanoi = document.getElementById("tower-hanoi")
 // chamar criarBox 3 vezes dentro da section
 function criarBox(value){
     const divCounteiner = document.createElement('div')
-    const divCounteinerLinha = document.createElement('div')
-    const divLinha = document.createElement('div')
-    divCounteinerLinha.appendChild(divLinha)
-    divCounteiner.appendChild(divCounteinerLinha)
+    const divCounteinerStick = document.createElement('div')
+    const divStick = document.createElement('div')
+    divCounteinerStick.appendChild(divStick)
+    divCounteiner.appendChild(divCounteinerStick)
     divCounteiner.id = "c" + value
     divCounteiner.classList.add("container")
-    divCounteinerLinha.classList.add("container-linha")
-    divLinha.classList.add("linha")
+    divCounteinerStick.classList.add("container-stick")
+    divStick.classList.add("stick")
     towerHanoi.appendChild(divCounteiner)
     
 }
