@@ -1,4 +1,4 @@
-const section = document.getElementById("section")
+const towerHanoi = document.getElementById("tower-hanoi")
 // chamar criarBox 3 vezes dentro da section
 function criarBox(value){
     const divCounteiner = document.createElement('div')
@@ -10,7 +10,7 @@ function criarBox(value){
     divCounteiner.classList.add("container")
     divCounteinerLinha.classList.add("container-linha")
     divLinha.classList.add("linha")
-    section.appendChild(divCounteiner)
+    towerHanoi.appendChild(divCounteiner)
     
 }
 for(let i = 1; i <= 3; i++){
@@ -29,24 +29,65 @@ tower1.appendChild(towerOne)
 tower2.appendChild(towerTwo)
 tower3.appendChild(towerThree)
 
+// CODIGO DA TORRE DE HANOI HTML PELO DOM ALDENIVAN
+// const towerHanoi = document.getElementById("torre-hanoi");
+
+// const newTowerOne = document.createElement("div");
+// const newTowerTwo = document.createElement("div");
+// const newTowerThree = document.createElement("div");
+// newTowerOne.id = "tower-one";
+// newTowerTwo.id = "tower-two";
+// newTowerThree.id = "tower-three";
+// newTowerOne.classList.add("box");
+// newTowerTwo.classList.add("box");
+// newTowerThree.classList.add("box");
+
+// function createStick() {
+    
+//     const newContainerStick = document.createElement("div");
+//     newContainerStick.classList.add("container-stick");
+
+//     const newStick = document.createElement("div");
+//     newStick.classList.add("stick")
+//     newContainerStick.appendChild(newStick);
+
+//     return newContainerStick;
+// }
+
+// function createBox(stick,tower) {
+
+//     const newContainer = document.createElement("div");
+//     newContainer.classList.add("container");
+//     newContainer.appendChild(stick);
+//     newContainer.appendChild(tower);
+
+//     return newContainer;
+// }
+
+// towerHanoi.appendChild(createBox(createStick(), newTowerOne));
+// towerHanoi.appendChild(createBox(createStick(), newTowerTwo));
+// towerHanoi.appendChild(createBox(createStick(), newTowerThree));
+
+// const towerOne = document.getElementById('tower-one')
+// const towerTwo = document.getElementById('tower-two')
+// const towerThree = document.getElementById('tower-three')
 
 const box = document.querySelectorAll(".container")
 
-
 for(let i = 1; i <= 4; i++){
     let newDiv = document.createElement('div')
-    newDiv.classList.add('disco')
+    newDiv.classList.add('disk')
     newDiv.id = 'd' + i
     towerOne.appendChild(newDiv)
-
 }
 
-const p = document.getElementById('contador')
+const counter = document.getElementById('counter')
 let firstClick = ""
 let secondClick = ""
 let validate = false;
 let count = 0
-p.innerHTML = count
+counter.innerHTML = count
+
 for(let i = 0; i < box.length; i++) {
 
     box[i].addEventListener("click",function(event) {
@@ -63,22 +104,22 @@ for(let i = 0; i < box.length; i++) {
             
             secondClick = call.querySelector(".box");
 
-            let arrFirst = tratamentoDeArray(firstClick)
-            let arrSecond = tratamentoDeArray(secondClick)
-            let condicao = condicaoTroca(arrFirst, arrSecond);
-            if(condicao === true) {
+            let arrFirst = arrayTratment(firstClick)
+            let arrSecond = arrayTratment(secondClick)
+            let condition = winCondition(arrFirst, arrSecond);
+            if(condition === true) {
                 count++
-                p.innerHTML = count
-                mudarBox(firstClick, secondClick);
+                counter.innerHTML = count
+                changeBox(firstClick, secondClick);
             }
 
             let elementClass = document.querySelector(".transformar")
             elementClass.classList.remove("transformar")
 
-            let towerTwoArr = tratamentoDeArray(box[1])
-            let towerThreeArr = tratamentoDeArray(box[2])
-
-            if (verificaVitoria(towerTwoArr) === true || verificaVitoria(towerThreeArr) === true ) {
+            let towerTwoArr = arrayTratment(box[1])
+            let towerThreeArr = arrayTratment(box[2])
+  
+            if (victoryVerification(towerTwoArr) === true || victoryVerification(towerThreeArr) === true ) {
                 modal()
             }
 
@@ -86,36 +127,31 @@ for(let i = 0; i < box.length; i++) {
             validate = false;
         }
     });
-
 }
 
 
 
-const condicaoTroca = (firstClick, secondClick) => {
+const winCondition = (firstClick, secondClick) => {
+   
     let item = firstClick[firstClick.length - 1]; 
-    let lastClick =secondClick[secondClick.length - 1] 
+    let lastClick = secondClick[secondClick.length - 1] 
     
     if ( item !== undefined ) {
         
         if ( item > lastClick || lastClick === undefined ) {
             return true
-        }
-        
+        }   
     }
     
     return false
-
 }
 
 
-
-function tratamentoDeArray(value){
+function arrayTratment(value){
     
-    const arr = value.getElementsByClassName('disco')
+    const arr = value.getElementsByClassName('disk')
     let arr2 = []
 
-    
-    
     for ( let i = 0; i < 4; i++ ) {
         if(arr[i] === undefined) {
             return arr2;
@@ -128,23 +164,23 @@ function tratamentoDeArray(value){
     return arr2;
 }
 
-const mudarBox = (firstClick, secondClick) => {
+const changeBox = (firstClick, secondClick) => {
     secondClick.appendChild( firstClick.lastElementChild )
 }
 
-function verificaVitoria(valorArr){
-    const teste = [1, 2, 3, 4]
-    if( valorArr.join() === teste.join() ){
+function victoryVerification(valorArr){
+    const test = [1, 2, 3, 4]
+    if( valorArr.join() === test.join() ){
         return true
     }
     return false
 }
 
 function modal(){
-    const modalId = document.getElementById("modal-vitoria")
+    const modalId = document.getElementById("modal-victory")
     const modalText = document.getElementById("modal-text")
     modalText.innerHTML = `Você finalizou com ${count} jogadas!`
-    modalId.classList.add('mostrar')
+    modalId.classList.add('show')
 }
 
 const button = document.getElementById("button")
