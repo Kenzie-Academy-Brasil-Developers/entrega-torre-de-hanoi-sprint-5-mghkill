@@ -5,24 +5,25 @@
 
 }
 body{
-    background-image: linear-gradient(to bottom right, red, orange, yellow, orange, red);
+    background-image: linear-gradient(to bottom right, red, #2196F3, yellow, #777777, red);
 }
 
 header{
-    color: #00daff;
+    color: #2e4354;
+    text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
     text-align: center;
     margin-top: 46px;
     font-size: 3rem;
-    font-family: 'Zen Tokyo Zoo', cursive;
+    font-family: 'Anton', sans-serif;
     font-weight: 500;
 }
 
 .hidden {
     display: none;
-}
-
-#winner h1 {
-    color: gold;
 }
 
 main {
@@ -33,10 +34,11 @@ main {
 }
 
 section{
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 98%;
 }
 
 .box__titulo{
@@ -49,7 +51,7 @@ section{
     width: 30%;
     height: 300px;
     position: relative;
-    margin:  10px auto 25px;
+    margin:  35px auto;
     cursor: cell;
 }
 
@@ -90,8 +92,8 @@ section{
 }
 
 .disk {
-    height: 60px;
-    border: solid 1px rgb(255, 255, 255);
+    height: 48px;
+    border: solid 2px rgb(255, 255, 255);
     margin: 0 auto;
     border-radius: 10px;
     filter: drop-shadow(2px 4px 6px black);
@@ -100,22 +102,22 @@ section{
 
 #d4 {
     width: 55%;
-    background-color: #00ebff;
+    background-color: #00FF03;
 }
 
 #d3 {
     width: 70%;
-    background-color: #00a2f1;
+    background-color: #ec0088;
 }
 
 #d2 {
     width: 85%;
-    background-color: #006194;
+    background-color: #FF0000;
 }
 
 #d1 {
     width: 100%;
-    background-color: #002943;;
+    background-color: #2C005F;;
 }
 
 .audio{
@@ -142,12 +144,13 @@ section{
 }
 
 .modal{
-    background: rgb(83 110 121);
-    color: white;
+    background-image: url(./img/trofeu-de-ouro-realista-cercado-por-confetes-caindo_48799-1706.jpg);
+    background-position: 0 -70px;
+    color: rgb(0, 0, 0);
     width: 80%;
     height: 200px;
     min-width: 200px;
-    border: solid 8px white;
+    border: solid 8px #a09c0c;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,7 +174,7 @@ button{
     color: #fff;
     font-weight: 700;
     font-size: 1.5rem;
-    font-family: Roboto;
+    font-family: sans-serif;
 }
 .count{
     margin: 0 auto;
@@ -181,23 +184,30 @@ button{
 }
 
 .count h2 {
-    font-family: 'Palette Mosaic', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 1.6rem;
     font-weight: 100;
-    color: #8ebbe2;
+    color: #2e4354;
+    text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
 }
 
 p{
     font-family: 'Palette Mosaic', cursive;
     font-size: xxx-large;
-    color: #30008b;
+    color: rgb(66 67 71);
+    text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
+    
 }
 
 @media only screen and (min-width: 460px) {
-   
-    body {
-        background-image: linear-gradient(to bottom, red, orange, yellow, orange, red);
-    }
    
     main {
         height: 650px;
@@ -209,6 +219,7 @@ p{
         justify-content: space-around;
         flex-direction: row; 
         align-items: center;
+        width: 100%;
     }
 
     .container {
@@ -221,4 +232,11 @@ p{
     
     .container {
         width: 250px;
+    }
+
+    .modal {
+        background-position: 25px;
+        width: 400px;
+        height: 250px;
+    }
 }
