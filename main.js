@@ -1,6 +1,34 @@
-let towerOne = document.getElementById('tower-one')
-let towerTwo = document.getElementById('tower-two')
-let towerThree = document.getElementById('tower-three')
+const section = document.getElementById("section")
+// chamar criarBox 3 vezes dentro da section
+function criarBox(value){
+    const divCounteiner = document.createElement('div')
+    const divCounteinerLinha = document.createElement('div')
+    const divLinha = document.createElement('div')
+    divCounteinerLinha.appendChild(divLinha)
+    divCounteiner.appendChild(divCounteinerLinha)
+    divCounteiner.id = "c" + value
+    divCounteiner.classList.add("container")
+    divCounteinerLinha.classList.add("container-linha")
+    divLinha.classList.add("linha")
+    section.appendChild(divCounteiner)
+    
+}
+for(let i = 1; i <= 3; i++){
+     criarBox(i)
+}
+const tower1 = document.getElementById('c1')
+const tower2 = document.getElementById('c2')
+const tower3 = document.getElementById('c3')
+const towerOne = document.createElement('div')
+const towerTwo = document.createElement('div')
+const towerThree = document.createElement('div')
+towerOne.classList.add('box')
+towerTwo.classList.add('box')
+towerThree.classList.add('box')
+tower1.appendChild(towerOne)
+tower2.appendChild(towerTwo)
+tower3.appendChild(towerThree)
+
 
 const box = document.querySelectorAll(".container")
 
@@ -13,11 +41,12 @@ for(let i = 1; i <= 4; i++){
 
 }
 
-
+const p = document.getElementById('contador')
 let firstClick = ""
 let secondClick = ""
 let validate = false;
-
+let count = 0
+p.innerHTML = count
 for(let i = 0; i < box.length; i++) {
 
     box[i].addEventListener("click",function(event) {
@@ -38,6 +67,8 @@ for(let i = 0; i < box.length; i++) {
             let arrSecond = tratamentoDeArray(secondClick)
             let condicao = condicaoTroca(arrFirst, arrSecond);
             if(condicao === true) {
+                count++
+                p.innerHTML = count
                 mudarBox(firstClick, secondClick);
             }
 
@@ -48,7 +79,7 @@ for(let i = 0; i < box.length; i++) {
             let towerThreeArr = tratamentoDeArray(box[2])
 
             if (verificaVitoria(towerTwoArr) === true || verificaVitoria(towerThreeArr) === true ) {
-                console.log('winner')
+                modal()
             }
 
             firstClick = ""
@@ -108,3 +139,19 @@ function verificaVitoria(valorArr){
     }
     return false
 }
+
+function modal(){
+    const modalId = document.getElementById("modal-vitoria")
+    const modalText = document.getElementById("modal-text")
+    modalText.innerHTML = `Você finalizou com ${count} jogadas!`
+    modalId.classList.add('mostrar')
+}
+
+const button = document.getElementById("button")
+
+button.addEventListener('click', refresh)
+
+function refresh(){
+    window.location.reload();
+}
+
