@@ -94,26 +94,69 @@ section{
 
 #d4 {
     width: 55%;
-    background-color: rgb(247 255 0);
+    background-color: #b3b8d6;
 }
 #d3 {
     width: 70%;
-    background-color: rgb(9 231 40);
+    background-color: #61697f;
 }
 #d2 {
     width: 85%;
-    background-color: #222ef1;
+    background-color: #1b1b26;
 }
 #d1 {
     width: 100%;
-    background-color: #ce0202;
+    background-color: #000000;
 }
 .audio{
     display: flex;
     justify-content: center;
     height: 100px;
 }
-
+.container-modal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.container-modal.mostrar{
+    display: flex;
+}
+.modal{
+    background: rgb(88 92 111);
+    color: white;
+    width: 60%;
+    height: 300px;
+    min-width: 200px;
+    border: solid 8px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width: 200px;
+    height: 50px;
+    border: solid 1px black;
+    border-radius: 8px;
+    margin: 22px;
+}
+.count{
+    margin: 0 auto;
+    padding: 42px;
+    text-align: center;
+    line-height: 2;
+}
+p{
+    font-size: xxx-large;
+    color: darkblue;
+}
 @media only screen and (min-width: 460px) {
     main {
         height: 650px;
