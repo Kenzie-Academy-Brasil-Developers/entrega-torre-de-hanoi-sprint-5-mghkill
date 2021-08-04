@@ -64,11 +64,11 @@ section{
     transform: translate(0px, -11px);
 }
 
-.container .container-linha {
+.container .container-stick {
     height: 100%;
 }
 
-.container .container-linha .linha {
+.container .container-stick .stick {
     height: 100%;
     width: 30px;
     background-color: #000000;

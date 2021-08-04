@@ -10,7 +10,6 @@ for(let i = 1; i <= 4; i++){
     newDiv.classList.add('disco')
     newDiv.id = 'd' + i
     towerOne.appendChild(newDiv)
-
 }
 
 
@@ -75,7 +74,6 @@ const condicaoTroca = (firstClick, secondClick) => {
     return false
 
 }
-
 
 
 function tratamentoDeArray(value){
