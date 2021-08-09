@@ -5,7 +5,7 @@
 
 }
 body{
-    background-image: linear-gradient(to bottom right, red, #2196F3, yellow, #777777, red);
+    background-image: linear-gradient(to bottom, red, #2196F3, yellow, #777777, red);
 }
 
 header{
@@ -17,9 +17,10 @@ header{
                 1px 0px 0px #FFF;
     text-align: center;
     margin-top: 46px;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Anton', sans-serif;
     font-weight: 500;
+    min-width: 300px;
 }
 
 .hidden {
@@ -31,6 +32,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 300px;
 }
 
 section{
@@ -141,21 +143,24 @@ section{
 
 .container-modal.show{
     display: flex;
+    min-width: 300px;
 }
 
 .modal{
     background-image: url(./img/trofeu-de-ouro-realista-cercado-por-confetes-caindo_48799-1706.jpg);
-    background-position: 0 -70px;
+    background-position: center center;
+    background-size: 90%;
     color: rgb(0, 0, 0);
     width: 80%;
     height: 200px;
-    min-width: 200px;
+    min-width: 280px;
     border: solid 8px #a09c0c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+
 }
 
 #modal-text {
@@ -185,7 +190,7 @@ button{
 
 .count h2 {
     font-family: 'Anton', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 100;
     color: #2e4354;
     text-shadow: 
@@ -197,7 +202,7 @@ button{
 
 p{
     font-family: 'Palette Mosaic', cursive;
-    font-size: xxx-large;
+    font-size: 3rem;
     color: rgb(66 67 71);
     text-shadow: 
                -1px -1px 0px #FFF, 
@@ -209,6 +214,14 @@ p{
 
 @media only screen and (min-width: 460px) {
    
+    body {
+        background-image: linear-gradient(to bottom right, red, #2196F3, yellow, #777777, red);
+    }
+
+    header{
+        font-size: 3rem;
+    }
+
     main {
         height: 650px;
         max-width: 1080px;
@@ -239,4 +252,9 @@ p{
         width: 400px;
         height: 250px;
     }
+
+    .count h2 {
+        font-size: 1.6rem;
+    }
+
 }
