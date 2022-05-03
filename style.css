@@ -5,6 +5,9 @@
 
 }
 
+body{
+    background-color: #ffffff;
+}
 
 header{
     color: #2e4354;
@@ -212,9 +215,6 @@ p{
 
 @media only screen and (min-width: 460px) {
    
-    body {
-        background-image: linear-gradient(to bottom right, red, #2196F3, yellow, #777777, red);
-    }
 
     header{
         font-size: 3rem;
