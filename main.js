@@ -29,49 +29,6 @@ tower1.appendChild(towerOne)
 tower2.appendChild(towerTwo)
 tower3.appendChild(towerThree)
 
-// CODIGO DA TORRE DE HANOI HTML PELO DOM ALDENIVAN
-// const towerHanoi = document.getElementById("torre-hanoi");
-
-// const newTowerOne = document.createElement("div");
-// const newTowerTwo = document.createElement("div");
-// const newTowerThree = document.createElement("div");
-// newTowerOne.id = "tower-one";
-// newTowerTwo.id = "tower-two";
-// newTowerThree.id = "tower-three";
-// newTowerOne.classList.add("box");
-// newTowerTwo.classList.add("box");
-// newTowerThree.classList.add("box");
-
-// function createStick() {
-    
-//     const newContainerStick = document.createElement("div");
-//     newContainerStick.classList.add("container-stick");
-
-//     const newStick = document.createElement("div");
-//     newStick.classList.add("stick")
-//     newContainerStick.appendChild(newStick);
-
-//     return newContainerStick;
-// }
-
-// function createBox(stick,tower) {
-
-//     const newContainer = document.createElement("div");
-//     newContainer.classList.add("container");
-//     newContainer.appendChild(stick);
-//     newContainer.appendChild(tower);
-
-//     return newContainer;
-// }
-
-// towerHanoi.appendChild(createBox(createStick(), newTowerOne));
-// towerHanoi.appendChild(createBox(createStick(), newTowerTwo));
-// towerHanoi.appendChild(createBox(createStick(), newTowerThree));
-
-// const towerOne = document.getElementById('tower-one')
-// const towerTwo = document.getElementById('tower-two')
-// const towerThree = document.getElementById('tower-three')
-
 const box = document.querySelectorAll(".container")
 
 for(let i = 1; i <= 4; i++){
