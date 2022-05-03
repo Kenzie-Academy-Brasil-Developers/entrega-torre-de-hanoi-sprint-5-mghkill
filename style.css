@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #ffffff;
+}
+
+header{
+    color: #2e4354;
+    text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
+    text-align: center;
+    margin-top: 46px;
+    font-size: 2rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 500;
+    min-width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+}
+
+section{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 98%;
+}
+
+.box__titulo{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 30%;
+    height: 300px;
+    position: relative;
+    margin:  35px auto;
+    cursor: cell;
+}
+
+.container:hover {
+    transition: 350ms;
+    transform: scale(1.1);
+}
+
+.transformar {
+    border: solid 5px #a4aad6;
+    border-radius: 10px;
+    transition: 350ms;
+    transform: scale(1.1);
+}
+
+.transformar .disk:last-child {
+    transition: 350ms;
+    transform: translate(0px, -11px);
+}
+
+.container .container-stick {
+    height: 100%;
+}
+
+.container .container-stick .stick {
+    height: 100%;
+    width: 30px;
+    background-color: #cec4c4;
+    margin: 0 auto;
+}
+
+.box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.disk {
+    height: 48px;
+    border: solid 2px rgb(255, 255, 255);
+    margin: 0 auto;
+    border-radius: 10px;
+    filter: drop-shadow(2px 4px 6px black);
+
+}
+
+#d4 {
+    width: 55%;
+    background-color: #00FF03;
+}
+
+#d3 {
+    width: 70%;
+    background-color: #ec0088;
+}
+
+#d2 {
+    width: 85%;
+    background-color: #FF0000;
+}
+
+#d1 {
+    width: 100%;
+    background-color: #2C005F;;
+}
+
+.audio{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.container-modal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-modal.show{
+    display: flex;
+    min-width: 300px;
+}
+
+.modal{
+    background-image: url(./img/trofeu-de-ouro-realista-cercado-por-confetes-caindo_48799-1706.jpg);
+    background-position: center center;
+    background-size: 90%;
+    color: rgb(0, 0, 0);
+    width: 80%;
+    height: 200px;
+    min-width: 280px;
+    border: solid 8px #a09c0c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+#modal-text {
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+button{
+    width: 50%;
+    height: 50px;
+    border: solid 1px red;
+    border-radius: 8px;
+    margin: 22px;
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+.count{
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    line-height: 2;
+}
+
+.count h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #2e4354;
+    text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
+}
+
+p{
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 3rem;
+    color: rgb(66 67 71);
+    text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
+    
+}
+
+@media only screen and (min-width: 460px) {
+    body{
+        background-image: linear-gradient(to bottom , red, #2196F3, yellow, #777, red);
+    }
+
+    header{
+        font-size: 3rem;
+    }
+
+    main {
+        height: 650px;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    
+    section{
+        justify-content: space-around;
+        flex-direction: row; 
+        align-items: center;
+        width: 100%;
+    }
+
+    .container {
+        height: 400px;
+    }
+
+    .disk {
+        height: 70px;
+    }
+    
+    .container {
+        width: 250px;
+    }
+
+    .modal {
+        background-position: 25px;
+        width: 400px;
+        height: 250px;
+    }
+
+    .count h2 {
+        font-size: 1.6rem;
+    }
+
+}
