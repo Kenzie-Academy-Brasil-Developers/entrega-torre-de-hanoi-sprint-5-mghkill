@@ -4,9 +4,7 @@
     box-sizing: border-box;
 
 }
-body{
-    background-image: linear-gradient(to bottom, red, #2196F3, yellow, #777777, red);
-}
+
 
 header{
     color: #2e4354;
